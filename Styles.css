@@ -1,0 +1,207 @@
+:root {
+    --font1: #363952;
+    --font2: #7980B8;
+    --button1: #617D7B;
+    --button2: #B0E3E0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 100px 290px 133px 144px;
+    height: 100vh;
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100px;*/
+
+    background: radial-gradient(var(--font2) 3%, var(--font1) 70%);
+
+    p {
+        font-family: "Inknut Antiqua", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 18px;
+        color: white;
+        -webkit-text-stroke: 1px black;
+    }
+}
+
+.Cards {
+    display: flex;   
+    
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+
+    background: radial-gradient(var(--font2) 3%, var(--font1) 70%);
+}
+.Cards div {
+    scroll-snap-align: center;
+    
+    min-width: 225px;
+    max-width: 255px;
+    margin: auto 10px;
+    
+    height: 82.4%;
+    
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow:  /*13px 13px 20px #afafaf;*/
+                -8px -8px 15px #ffffff;
+
+    
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+
+        
+    }
+}
+
+.Progress-Bar {
+    display: grid;
+    grid-template-rows: 38px 38px 57px;
+    justify-items: center;
+
+    background: radial-gradient(var(--font2) 3%, var(--font1) 70%);
+
+    .Title, .Album {
+        font-family: "Inknut Antiqua", serif;
+        font-weight: 700;
+        font-style: normal;
+        
+        color: white;
+        
+    }
+    
+    .Title {
+        
+        font-size: 16px;
+        -webkit-text-stroke: 1px black;
+ 
+        align-self: end;
+            
+    }
+    
+
+    .Album {
+        
+        font-size: 13px;
+        -webkit-text-stroke: 0.85px black;
+        
+        align-self: start;
+    }
+
+    .BarTime {
+        width: 83%;
+        
+        .Bar {
+            
+            height: 10px;
+            background-color: #B8AFAF;
+            border-radius: 5px;
+
+            .FullBar {
+                height: 100%;
+                width: 52.3%;
+                background-color: #70BB78;
+                border-radius: 5px;
+            }
+        }
+        .Minutes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+
+            div {
+                font-family: "Inknut Antiqua", serif;
+                font-weight: 300;
+                font-style: normal;
+                font-size: 12px;
+                color: white;
+                
+            }
+        }
+    }
+    
+}
+
+
+.Buttons {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-items: center;
+    align-items: center;
+
+    background: radial-gradient(var(--font2) 3%, var(--font1) 70%);
+
+    .Pause, .Skip-Prev, .Skip-Next, .Stop {
+        width: 49px;
+        height: 46px;
+        background: radial-gradient(var(--button2), var(--button1));
+        border-radius: 50%;
+    }
+    .Play {
+        width: 78px;
+        height: 71px;
+        
+        background: radial-gradient(var(--button2), var(--button1));
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        /*height: 554px;*/
+        height: 100vh;
+    }
+    .wrapper {        
+        
+        display: grid;
+        grid-template-rows: 14.99% 43.47% 19.94% 21.58%;
+        /*grid-template-rows: 83.04px 240.82px 110.46px 119.55px;*/
+        height: 100vh;
+        
+    }
+
+    .Cards div {
+        /*height: 198.4px;*/
+        height: 82.4%;
+        box-shadow:  -5px -5px 10px #ffffff;
+                
+    }
+
+    .Progress-Bar {
+        
+        display: grid;
+        grid-template-rows: 28.57% 28.57% 42.85%;
+        /*grid-template-rows: 31.57px 31.57px 47.25px;*/
+
+    }
+
+    .Buttons {
+        
+    
+        .Pause, .Skip-Prev, .Skip-Next, .Stop {
+            width: 60px;
+            height: 60px;
+
+        }
+        .Play {
+            width: 92px;
+            height: 92px;
+           
+        }
+    }
+}
