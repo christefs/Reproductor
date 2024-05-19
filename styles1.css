@@ -37,6 +37,8 @@
 
 .Cards {
     display: flex;   
+
+    /*justify-content: center;*/
     
     overflow-x: scroll;
     overscroll-behavior-x: contain;
@@ -47,6 +49,7 @@
 .Cards div {
     scroll-snap-align: center;
     
+    width: 20%;
     min-width: 225px;
     max-width: 255px;
     margin: auto 10px;
@@ -54,7 +57,7 @@
     height: 82.4%;
     
     border-radius: 10px;
-    background: #e0e0e0;
+    /*background: #e0e0e0;*/
     box-shadow:  /*13px 13px 20px #afafaf;*/
                 -8px -8px 15px #ffffff;
 
